@@ -1,0 +1,76 @@
+header{
+  padding: 10px;
+  background-color: rgb(137, 139, 147);
+  top: 0;
+  width: 100%;
+}
+
+.logo{
+  width: 50px;
+  cursor: pointer;
+} 
+
+.desktop-menu{
+  margin-top: 15px;
+}
+
+.desktop-menu ul{
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-menu ul li{
+  list-style-type: none;
+  display: inline-block;
+  color: white;
+  font-family: system-ui;
+  font-size: 18px;
+  margin-left: 20px;
+
+}
+
+.desktop-menu ul li:hover{
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.1s ease-in-out;
+}
+
+.menu-icon{
+  display: none;
+}
+
+@media screen and (min-width: 120px) and (max-width: 900px) {
+  .desktop-menu{
+    position: fixed;
+    transition: 0.4s ease-in-out;
+    right: -200px;
+    top: 55px;
+    background-color: rgba(137, 139, 147);
+    width: 200px;
+    height: 50%;
+  }
+  .desktop-menu ul li{
+    display: grid;
+    text-align: center;
+    padding: 10px;
+    padding-top: 19px;
+    margin: 0;
+    border-bottom: 1px solid white;
+  }
+  .desktop-menu ul{
+    padding-top: 0px;
+  }
+  .menu-icon{
+    display: block;
+    margin-top: 12px;
+    font-size: 30px;
+    color: white;
+  }
+  .menu-icon i{
+    cursor: pointer;
+  }
+  .movile-menu{
+    right: 0;
+    transition: 0.4s ease-in;
+  }
+}

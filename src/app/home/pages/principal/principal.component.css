@@ -1,0 +1,18 @@
+.container{
+  color: white;
+  display: gird;
+  min-width: 100%;
+  padding: 0;
+}
+.container h1{
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.container h2{
+  padding: 10px;
+}
+.container img{
+  width: 200px;
+  padding-left: 10px;
+}

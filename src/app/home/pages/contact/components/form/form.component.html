@@ -1,0 +1,102 @@
+<details name="type-form">
+  <summary>Anonymous message</summary>
+  <section class="form-container">
+    <form [formGroup]="contactForm" (submit)="sendInfo($event)" data-bs-theme="dark">
+      <div class="message-container">
+        <label for="message" class="form-label">Message:</label>
+        <textarea [ngClass]="{'is-invalid': hasErrors('message', 'minlength')}" class="form-control" id="message"
+          formControlName="message"></textarea>
+        @if (hasErrors('message', 'minlength')) {
+        <span class="text-danger">10 characters min.</span>
+        }
+      </div>
+      <div class="btn-container">
+        <button type="submit" class="btn btn-outline-light">Send</button>
+      </div>
+    </form>
+  </section>
+</details>
+
+<details name="type-form">
+  <summary>Email message</summary>
+  <section class="form-container">
+    <form [formGroup]="contactForm" (submit)="sendInfo($event)" data-bs-theme="dark">
+      <div class="message-container">
+        <label for="email" class="form-label">Email address:</label>
+        <input [ngClass]="{'is-invalid': hasErrors('email', 'email') || hasErrors('email', 'required')}" type="email"
+          class="form-control" id="email" placeholder="name@example.com" formControlName="email">
+        @if (hasErrors('email', 'email')) {
+        <span class="text-danger">Hey, it's not a valid email.</span>
+        }@else if (hasErrors('email', 'required')) {
+        <span class="text-danger">Hey, this camp is required.</span>
+        }
+      </div>
+      <div class="message-container">
+        <label for="message" class="form-label">Message:</label>
+        <textarea class="form-control" id="message" formControlName="message"></textarea>
+        @if (hasErrors('message', 'minlength')) {
+          <span class="text-danger">10 characters min.</span>
+        }
+      </div>
+      <div class="btn-container">
+        <button type="submit" class="btn btn-outline-light">Send</button>
+      </div>
+    </form>
+  </section>
+</details>
+
+<details name="type-form">
+  <summary>All data message</summary>
+  <section class="form-container">
+    <form [formGroup]="contactForm" (submit)="sendInfo($event)" data-bs-theme="dark">
+      <div class="message-container">
+        <label for="email" class="form-label">Email address:</label>
+        <input [ngClass]="{'is-invalid': hasErrors('email', 'email') || hasErrors('email', 'required')}" type="email"
+          class="form-control" id="email" placeholder="name@example.com" formControlName="email">
+        @if (hasErrors('email', 'email')) {
+        <span class="text-danger">Hey, it's not a valid email.</span>
+        }@else if (hasErrors('email', 'required')) {
+        <span class="text-danger">Hey, this camp is required.</span>
+        }
+      </div>
+      <div class="message-container">
+        <label for="name" class="form-label">Name:</label>
+        <input [ngClass]="{'is-invalid': hasErrors('name', 'required')}" type="text" class="form-control" id="name"
+          placeholder="Your name..." formControlName="name">
+        @if (hasErrors('name', 'required')) {
+        <span class="text-danger">Hey, this camp is required.</span>
+        }
+      </div>
+      <div class="message-container">
+        <label for="age" class="form-label">Age:</label>
+        <input [ngClass]="{'is-invalid': hasErrors('email', 'required')} " type="number" class="form-control" id="age"
+          placeholder="Your age..." formControlName="age">
+        @if (hasErrors('age', 'required')) {
+        <span class="text-danger">Hey, this camp is required.</span>
+        }
+      </div>
+      <div class="message-container">
+        <label for="gender" class="form-label">Gender:</label>
+        <select id="gender" class="form-control" formControlName="gender">
+          <option selected disabled value="">Select gender..</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        @if (hasErrors('gender', 'required')) {
+        <span class="text-danger">Hey, this camp is required.</span>
+        }
+      </div>
+      <div class="message-container">
+        <label for="message" class="form-label">Message:</label>
+        <textarea class="form-control" id="message" formControlName="message"></textarea>
+        @if (hasErrors('message', 'minlength')) {
+          <span class="text-danger">10 characters min.</span>
+        }
+      </div>
+      <div class="btn-container">
+        <button type="submit" class="btn btn-outline-light">Send</button>
+      </div>
+    </form>
+  </section>
+</details>

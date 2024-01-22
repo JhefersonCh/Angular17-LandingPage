@@ -1,0 +1,12 @@
+.carousel-container{
+  width: 80%;
+}
+.carousell{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image{
+  width: 100%;
+  height: 500px;
+}

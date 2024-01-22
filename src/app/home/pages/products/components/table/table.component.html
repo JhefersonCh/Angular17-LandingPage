@@ -1,0 +1,44 @@
+<div class="container">
+  <label for="search-input" style="font-size: 17px;">Search:</label>
+  <input type="text" id="search-input" class="search" placeholder="Search" [(ngModel)]="search" (input)="searchElement()">
+  @if (!loading) {
+    <table class="data-table">
+      <thead>
+        <th>
+          <span (click)="orderById('id')" class="table-header">#</span>
+        </th>
+        <th>
+          <span (click)="orderByTitle('title')" class="table-header">Title</span>
+        </th>
+        <th>
+          <span (click)="orderByTitle('category')" class="table-header">Category</span>
+        </th>
+        <th>
+          <span (click)="orderById('price')" class="table-header">Price</span>
+        </th>
+        <th>Option</th>
+      </thead>
+      <tbody>
+        @for (product of productsF; track product.id) {
+          <tr>
+            <td class="id">{{product.id}}</td>
+            <td>
+              <span>{{product.title}}</span>
+            </td>
+            <td>
+              <span>{{product.category}}</span>
+            </td>
+            <td>
+              <span>{{product.price | currency}}</span>
+            </td>
+            <td class="button-container">
+              <button (click)="abrirDetallesModal(product.id)" class="details">Details</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }@else if (loading) {
+    <span>Loading...</span>
+  }
+</div>

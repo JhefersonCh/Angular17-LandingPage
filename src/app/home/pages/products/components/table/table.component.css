@@ -1,0 +1,59 @@
+.data-table{
+  width: 100%;
+}
+.container{
+  padding: 20px;
+  min-width: 100%;
+}
+.data-table th{
+  border: 1px solid grey;
+  text-align: center;
+  padding: 10px;
+}
+.data-table td{
+  border: 1px solid grey;
+  padding-left: 10px;
+}
+.data-table .id{
+  width: 30px;
+  text-align: center;
+}
+.button-container{
+  text-align: center;
+}
+.search{
+  margin: 10px
+}
+.table-header{
+  cursor: pointer;
+}
+.details{
+  background-color: #333; /* Color de fondo gris oscuro */
+  color: #fff; /* Color del texto blanco */
+  padding: 5px 10px; /* Espaciado interno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  margin: 5px;
+}
+.details:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el mouse */
+}
+span{
+  font-size: 15px;
+}
+.search{
+  padding: 10px; /* Espaciado interno del input */
+  border: 1px solid #555; /* Borde del input */
+  border-radius: 5px; /* Esquinas redondeadas */
+  background-color: #333; /* Color de fondo gris oscuro */
+  color: #fff; /* Color del texto blanco */
+  width: 300px;
+  min-width: 200px;
+}
+.search:focus {
+  outline: none;
+}
+.search:hover {
+  border-color: #888; /* Cambia el color del borde al pasar el mouse */
+}

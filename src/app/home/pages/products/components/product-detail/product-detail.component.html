@@ -1,0 +1,23 @@
+<div class="modal-overlay">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h1>Product datails:</h1>
+      <button (click)="cerrarModal()" mat-button class="close">&times;</button>
+    </div>
+    <div>
+      @if(!loading){
+      <h2>{{product?.title}}</h2>
+      <div class="modal-body">
+        <img src="{{product?.image}}" alt="">
+        <div class="content">
+          <h3>Price: {{product?.price | currency}}</h3>
+          <h3>Category: {{product?.category}}</h3>
+          <h3>Description: {{product?.description}}</h3>
+        </div>
+      </div>
+      }@else {
+      <span>Loading...</span>
+      }
+    </div>
+  </div>
+</div>
