@@ -1,0 +1,21 @@
+.details-container{
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.489);
+  margin-top: 8px;
+}
+.form-container{
+  padding: 10px;
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 5px;
+  background-color: rgba(110, 112, 118, 0.573);
+  margin-top: 10px;
+}
+.input-data{
+  margin-block: 10px;
+}
+.all-content{
+  padding-block: 20px;
+}

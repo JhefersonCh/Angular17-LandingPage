@@ -1,6 +1,95 @@
-<br>
 <div class="container">
-  <h1 style="color: white">Conctact me: </h1>
-  <app-form style="color: white"></app-form>
-  <br>
+  <div class="all-content">
+    <h1 style="color: white">Conctact me: </h1>
+
+  <section class="details-container">
+    <details name="according-detail">
+      <summary>Anonymous message</summary>
+      <div class="form-container">
+        <app-form [contactForm]="contactForm" [sendInfo]="sendInfo">
+          <div [formGroup]="contactForm">
+            <div class="input-data">
+              <app-inputs [name]="'message'" [hasErrors]="hasErrors('message', 'minlength')">
+                <textarea id="message" class="form-control" formControlName="message"
+                  [ngClass]="{'is-invalid': hasErrors('message','minlength')}"></textarea>
+              </app-inputs>
+            </div>
+          </div>
+        </app-form>
+      </div>
+    </details>
+  </section>
+
+  <section class="details-container">
+    <details name="according-detail">
+      <summary>Email message</summary>
+      <div class="form-container">
+        <app-form [contactForm]="contactForm" [sendInfo]="sendInfo">
+          <div [formGroup]="contactForm">
+            <div class="input-data">
+              <app-inputs [name]="'name'" [hasErrors]="hasErrors('name', 'required')">
+                <input type="text" class="form-control" [ngClass]="{'is-invalid': hasErrors('name', 'required')}"
+                  formControlName="name">
+              </app-inputs>
+            </div>
+            <div class="input-data">
+              <app-inputs [name]="'message'" [hasErrors]="hasErrors('message', 'minlength')">
+                <textarea id="message" class="form-control" formControlName="message"
+                  [ngClass]="{'is-invalid': hasErrors('message','minlength')}"></textarea>
+              </app-inputs>
+            </div>
+          </div>
+        </app-form>
+      </div>
+    </details>
+  </section>
+
+  <section class="details-container">
+    <details name="according-detail">
+      <summary>All data message</summary>
+      <div class="form-container">
+        <app-form [contactForm]="contactForm" [sendInfo]="sendInfo">
+          <div [formGroup]="contactForm">
+            <div class="input-data">
+              <app-inputs [name]="'name'" [hasErrors]="hasErrors('name', 'required')">
+                <input type="text" class="form-control" [ngClass]="{'is-invalid': hasErrors('name', 'required')}"
+                  formControlName="name">
+              </app-inputs>
+            </div>
+            <div class="input-data">
+              <app-inputs [name]="'email'" [hasErrors]="hasErrors('email', 'required') || hasErrors('email','email')">
+                <input type="email" class="form-control"
+                  [ngClass]="{'is-invalid': hasErrors('email','email') || hasErrors('email', 'required')}"
+                  formControlName="email">
+              </app-inputs>
+            </div>
+            <div class="input-data">
+              <app-inputs [name]="'age'" [hasErrors]="hasErrors('age', 'required')">
+                <input type="number" class="form-control" [ngClass]="{'is-invalid': hasErrors('age', 'required')}"
+                  formControlName="age">
+              </app-inputs>
+            </div>
+            <div class="input-data">
+              <app-inputs [name]="'gender'" [hasErrors]="hasErrors('gender', 'required')">
+                <select id="gender" class="form-control" [ngClass]="{'is-invalid': hasErrors('gender','required')}"
+                  formControlName="gender">
+                  <option selected disabled value="">Choose..</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </app-inputs>
+            </div>
+            <div class="input-data">
+              <app-inputs [name]="'message'" [hasErrors]="hasErrors('message', 'minlength')">
+                <textarea id="message" class="form-control" formControlName="message"
+                  [ngClass]="{'is-invalid': hasErrors('message','minlength')}"></textarea>
+              </app-inputs>
+            </div>
+          </div>
+        </app-form>
+      </div>
+    </details>
+  </section>
+  </div>
 </div>

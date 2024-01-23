@@ -1,0 +1,5 @@
+<label for="{{ name }}" class="form-label">{{ name | capitalize }}</label>
+  <ng-content></ng-content>
+@if (hasErrors) {
+  <span class="text-danger">{{errorMessage()}}</span>
+}
