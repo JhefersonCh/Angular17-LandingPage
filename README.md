@@ -1,27 +1,39 @@
-# RouterTest
+# 🛍️ Landing Page con Angular 17 + Bootstrap (Refactorizado)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+Esta es mi primera landing page creada con [Angular 17](https://angular.io/) y [Bootstrap](https://getbootstrap.com/), refactorizada para mejorar la arquitectura del proyecto. Aún utiliza la API pública de productos de [Fake Store API](https://fakestoreapi.com/products), pero con una estructura de código más limpia y escalable.
 
-## Development server
+## 🎯 Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- 🛒 Mostrar productos desde una API REST pública
+- 💻 Diseño responsive con Bootstrap
+- 🔍 Búsqueda y filtro de productos (si lo agregaste)
+- ⚡ Animaciones y transiciones con Angular
+- 🚀 Código refactorizado con una arquitectura modular
 
-## Code scaffolding
+## 👨‍🏫 Tutorial original
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+📺 Video completo en YouTube:  
+[https://www.youtube.com/watch?v=soInCF7nbDw&t=26838s](https://www.youtube.com/watch?v=soInCF7nbDw&t=26838s)
 
-## Build
+## 🛠️ Tecnologías
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular 17
+- Bootstrap 5
+- TypeScript
+- HTML/CSS
+- [Fake Store API](https://fakestoreapi.com/)
 
-## Running unit tests
+## 🚀 Instalación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clona el proyecto:
+   ```bash
+   git clone https://github.com/JhefersonCh/Angular17-LandingPage.git
+   cd Angular17-LandingPage
 
-## Running end-to-end tests
+2. Instala dependencias:
+   ```bash
+   npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Ejecuta el servidor de desarrollo:
+   ```bash
+   ng serve
